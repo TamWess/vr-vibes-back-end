@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require ("mongoose");
 const { Schema } = mongoose;
 
 const FormulaireSchema = new Schema ({
@@ -20,11 +20,11 @@ const FormulaireSchema = new Schema ({
 	},
 	date: {
 		type: String,
-		required: false,
+		required: true,
 	},
 	rue: {
 		type: String,
-		required: true,
+		// required: false,
 	},
 	ville: {
 		type: String,
@@ -34,14 +34,19 @@ const FormulaireSchema = new Schema ({
 		type: String,
 		required: true,
 	},
+	mail: {
+		type: String,
+		required: true,
+	},
 	tel: {
-		type: Number,
-		required: false
+		type: String,
+	}, 
+	precisions: {
+		type: String,
 	}, 
 	
-		collection: "formulaires",
 });
 
-const Formulaire = mongoose.model("Formulaire", FormulaireSchema);
+const Formulaire = mongoose.model("formulaireprivee", FormulaireSchema);
 
-export default Formulaire
+module.exports = Formulaire
