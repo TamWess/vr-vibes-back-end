@@ -1,7 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv").config();
 const cors = require("cors");
-const port = 3001;
 const mongoose = require("mongoose");
 
 connectDB = process.env.URLDB;
@@ -16,15 +15,21 @@ const connectionToDataBase = async () => {
   }
 };
 
-connectionToDataBase();
+start();
 
-const app = express();
+async function start() {
+  const app = express();
 
-app.use(cors());
+  app.use(cors());
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: false }));
 
-app.use("/", require("./routes/post.routes"));
+  app.use("/", require("./routes/post.routes"));
 
-app.listen(port, () => console.log("le serveur est lancé au port" + port));
+  await connectionToDataBase();
+
+  app.listen(process.env.port, () =>
+    console.log(`le serveur est lancé au port ${process.env.port}`)
+  );
+}
