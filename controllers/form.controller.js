@@ -53,14 +53,14 @@ const createReservation = async (req, res, next) => {
 			port: 587,
 			secure: false,
 			auth: {
-				user: process.env.nodeMailerMail,
+				user: process.env.NODE_MAILER_MAIL,
 				pass: process.env.nodeMailerPassword,
 			},
 		};
 		const transport = nodemailer.createTransport(nodemailerConfig);
 		const emailData = {
 			to: mail,
-			from: process.env.nodeMailerMail,
+			from: process.env.NODE_MAILER_MAIL,
 			subject: "vr-vibes nouvelle demande client",
 			html: `<p>Test email</p>`,
 			text: "Premièreligneimportante",
@@ -68,8 +68,8 @@ const createReservation = async (req, res, next) => {
 
 		await transport.sendMail(emailData);
 		const myEmailData = {
-			to: process.env.nodeMailerMail,
-			from: process.env.nodeMailerMail,
+			to: process.env.NODE_MAILER_MAIL,
+			from: process.env.NODE_MAILER_MAIL,
 			subject: "vr-vibes nouvelle demande client",
 			text: `
 			Type: ${type}
