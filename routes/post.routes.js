@@ -7,4 +7,8 @@ const nodemailer = require("nodemailer");
 
 router.post("/reservations", createReservation);
 
+router.get("/healthcheck", (req, res) => {
+  res.json({ msg: "OK" });
+});
+
 module.exports = router;
