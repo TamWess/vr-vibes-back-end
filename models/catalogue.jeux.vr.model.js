@@ -1,4 +1,4 @@
-const mongoose = require ("mongoose");
+const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const SelectionJeuSchema = new Schema(
@@ -27,4 +27,4 @@ const SelectionJeuSchema = new Schema(
 
 const SelectionJeu = mongoose.model("CatalogueJeu", SelectionJeuSchema);
 
-export default SelectionJeu;
+module.exports = SelectionJeu;
