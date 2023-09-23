@@ -4,7 +4,7 @@ const router = express.Router();
 const { createReservation } = require("../controllers/form.controller.js");
 const nodemailer = require("nodemailer");
 // const { validationResult } = require("express-validator");
-import { getCatalogueJeux } from "../controllers/jeux.controller.js";
+const { getCatalogueJeux } = require("../controllers/jeux.controller.js");
 
 router.post("/reservations", createReservation);
 
