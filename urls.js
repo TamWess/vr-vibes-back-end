@@ -1,5 +1,5 @@
 export const URL = {
-  catalogueJeuxVR: "https://vr-vibes.onrender.com/api/catalogue-jeux-vr/get",
+  catalogueJeuxVR: "https://vr-vibes.onrender.com/catalogue-jeux-vr",
 };
 
 // export const URL = {

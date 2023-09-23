@@ -8,7 +8,7 @@ const { getCatalogueJeux } = require("../controllers/jeux.controller.js");
 
 router.post("/reservations", createReservation);
 
-router.get("/getCatalogueJeuxVR", getCatalogueJeux);
+router.get("/get", getCatalogueJeux);
 
 router.get("/healthcheck", (req, res) => {
   res.json({ msg: "OK" });
