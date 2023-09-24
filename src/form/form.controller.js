@@ -1,5 +1,6 @@
 const nodemailer = require("nodemailer");
-const Reservation = require("../models/form-private.model.js");
+const Reservation = require("./form-private.model.js");
+const { checkAccessToken } = require("../utils/token.utils.js");
 
 const createReservation = async (req, res, next) => {
   const {
@@ -103,4 +104,8 @@ const createReservation = async (req, res, next) => {
   }
 };
 
-module.exports = { createReservation };
+function listReservations(req,res){
+	res.json({ msg: 'reviews'})
+}
+
+module.exports = { createReservation, listReservations };

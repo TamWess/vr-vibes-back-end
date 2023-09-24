@@ -1,1 +1,25 @@
-https://vr-vibes.onrender.com/healthcheck
+
+
+
+
+@baseUrlProd = https://vr-vibes.onrender.com
+@baseUrlLocal = http://localhost:3001
+
+###
+GET {{baseUrlLocal}}/tests HTTP/1.1
+
+###
+GET {{baseUrlLocal}}/api/healthcheck HTTP/1.1
+
+###
+POST {{baseUrlLocal}}/auth/tokens HTTP/1.1
+Content-Type: application/json
+
+{
+	"email": "adilsontamrabet@aol.fr",
+	"password": "Jurassic_1108_Park_@"
+}
+
+###
+GET {{baseUrlLocal}}/reviews HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkaWxzb250YW1yYWJldEBhb2wuZnIiLCJpYXQiOjE2OTU1NTQyNjYsImV4cCI6MTY5NTU1NDg2Nn0.ZIEnT8Nn1WPT_tyr26b6pqfrAnGuAGnvF-Qo55lLlIU
