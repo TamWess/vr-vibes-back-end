@@ -6,7 +6,10 @@
 @baseUrlLocal = http://localhost:3001
 
 ###
-GET {{baseUrlLocal}}/tests HTTP/1.1
+GET {{baseUrlLocal}}/jeux-selection?q=coopération HTTP/1.1
+
+###
+GET {{baseUrlLocal}}/jeux-selection/650ec02fbd5835bfe88d9ebf HTTP/1.1
 
 ###
 GET {{baseUrlLocal}}/api/healthcheck HTTP/1.1
@@ -19,6 +22,8 @@ Content-Type: application/json
 	"email": "adilsontamrabet@aol.fr",
 	"password": "Jurassic_1108_Park_@"
 }
+
+
 
 ###
 GET {{baseUrlLocal}}/reviews HTTP/1.1

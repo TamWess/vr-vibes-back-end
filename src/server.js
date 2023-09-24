@@ -24,7 +24,6 @@ async function start() {
   app.use(express.urlencoded({ extended: false }));
 
   app.use(require("./routes/routes.js"));
-  app.use("/catalogue-jeux-vr", require("./routes/routes.js"));
 
   await connectionToDataBase();
 
