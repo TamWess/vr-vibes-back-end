@@ -10,9 +10,9 @@ const createReservation = async (req, res, next) => {
     nom,
     prenom,
     date,
-    rue,
-    ville,
-    codePostal,
+    // rue,
+    // ville,
+    // codePostal,
     mail,
     tel,
     precisions,
@@ -25,9 +25,9 @@ const createReservation = async (req, res, next) => {
       nom,
       prenom,
       date,
-      rue,
-      ville,
-      codePostal,
+    //   rue,
+    //   ville,
+    //   codePostal,
       mail,
       tel,
       precisions,
@@ -78,14 +78,16 @@ const createReservation = async (req, res, next) => {
 			Nom: ${nom}
 			Prenom: ${prenom}
 			Date: ${date}
-			Rue: ${rue}
-			Ville: ${ville}
-			Code postal: ${codePostal}
 			Mail: ${mail}
 			Tel: ${tel}
 			Precisions: ${precisions}
 			`,
-    };
+		};
+		// à ajouter si restitution des coordonnées géographiques demandée
+	
+		// Rue: ${rue}
+		// Ville: ${ville}
+		// Code postal: ${codePostal}
 
     await transport.sendMail(myEmailData);
     res.status(201).json({

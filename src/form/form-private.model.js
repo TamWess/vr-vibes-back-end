@@ -12,27 +12,25 @@ const ReservationSchema = new Schema({
   },
   nom: {
     type: String,
-    required: true,
   },
   prenom: {
     type: String,
-    required: true,
   },
   date: {
     type: Date,
     required: true,
   },
-  rue: {
-    type: String,
-  },
-  ville: {
-    type: String,
-    required: true,
-  },
-  codePostal: {
-    type: String,
-    required: true,
-  },
+  //   rue: {
+  //     type: String,
+  //   },
+  //   ville: {
+  //     type: String,
+  //     required: true,
+  //   },
+  //   codePostal: {
+  //     type: String,
+  //     required: true,
+  //   },
   mail: {
     type: String,
     required: true,

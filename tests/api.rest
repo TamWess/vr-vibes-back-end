@@ -12,6 +12,9 @@ GET {{baseUrlLocal}}/jeux-selection?q=coopération HTTP/1.1
 GET {{baseUrlLocal}}/jeux-selection/650ec02fbd5835bfe88d9ebf HTTP/1.1
 
 ###
+GET {{baseUrlLocal}}/jeux-selection/ HTTP/1.1
+
+###
 GET {{baseUrlLocal}}/api/healthcheck HTTP/1.1
 
 ###

@@ -28,6 +28,6 @@ async function start() {
   await connectionToDataBase();
 
   app.listen(process.env.PORT, () =>
-    console.log(`le serveur est lancé au port ${process.env.port}`)
+    console.log(`le serveur est lancé au port ${process.env.PORT}`)
   );
 }
